@@ -57,11 +57,28 @@ body::after {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  transition: var(--trans-box);
+}
+@media (max-width: 500px) {
+  .header .head h1 {
+    font-size: 4.6vw;
+  }
+}
+@media (max-width: 400px) {
+  .header .head h1 {
+    font-size: 4.7vw !important;
+  }
+}
+@media (max-width: 950px) {
+  .header .head h1 {
+    font-size: 4vw;
+  }
 }
 
 .login-con {
   display: flex;
   justify-content: center;
+  transition: var(--trans-box);
 }
 
 .login {
@@ -73,9 +90,35 @@ body::after {
   padding: 1rem 0;
   border-radius: 20px;
 }
+@media (max-width: 600px) {
+  .login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: var(--trans-box);
+  }
+}
+@media (max-width: 900px) {
+  .login {
+    width: 70%;
+    transition: var(--trans-box);
+  }
+}
+
+.signup-con {
+  display: flex;
+  justify-content: center;
+  transition: var(--trans-box);
+}
 
 .signup {
   margin-top: 5%;
+}
+@media (max-width: 900px) {
+  .signup {
+    transition: var(--trans-box);
+    width: 70%;
+  }
 }
 
 .contact-con {
@@ -98,8 +141,7 @@ body::after {
   margin: 1.5rem 0;
   transition: var(--trans-box);
 }
-.contact-con .input-control input,
-.contact-con .input-control textarea {
+.contact-con .input-control input {
   border-radius: 30px;
   font: 400 20px teko;
   letter-spacing: 2px;
@@ -110,12 +152,21 @@ body::after {
   background: transparent;
   width: 100%;
   color: var(--grey-1);
-  resize: none;
   transition: var(--trans-box);
 }
-@media (max-width: 700px) {
+@media (max-width: 590px) {
+  .contact-con .input-control input {
+    width: 90%;
+    transition: var(--trans-box);
+  }
+}
+@media (max-width: 470px) {
   .contact-con .input-control {
     width: 100%;
+    transition: var(--trans-box);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .contact-con #submit,
@@ -126,6 +177,7 @@ body::after {
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.61);
   color: var(--grey-2);
   font-size: 2rem;
+  margin-top: 2rem;
   transition: var(--trans-box);
 }
 .contact-con #submit:hover,
@@ -151,16 +203,11 @@ body::after {
   background: #000;
 }
 @media (max-width: 730px) {
-  .contact-con .contact-form {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: var(--trans-box);
-  }
   .contact-con .contact-form label {
     font-size: 1.2rem;
+  }
+  .contact-con .contact-form .input-control {
+    margin: 0;
   }
 }
 
