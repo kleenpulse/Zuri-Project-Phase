@@ -1,0 +1,59 @@
+.btn {
+    width: 100%;
+    text-align: center;
+
+    p {
+        font-family: teko;
+        font-size: 22px;
+        margin-top: 1rem;
+        color: var(--grey-2);
+
+        a {
+            color: var(--white);
+
+            &:where(:hover, :active) {
+                color: var(--cyan);
+            }
+        }
+    }
+}
+
+.login-foo {
+    position: absolute !important;
+    width: 100%;
+    bottom: 0 !important;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    transition: var(--trans-box);
+
+    footer {
+        font: 400 2.5rem teko;
+        letter-spacing: 2px;
+        background: var(--gradient);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        text-transform: uppercase;
+        transition: var(--trans-box);
+    }
+
+    @media (max-width:600px) {
+        footer {
+            font-size: 6vw;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #01011d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--underline-2);
+    border-radius: 10px;
+}

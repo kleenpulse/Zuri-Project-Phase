@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  list-style: none;
+  user-select: none;
+  --bg: #01011d;
+  --cyan: #00ffff;
+  --card-hover: #060116;
+  --purple-1: #c300ff;
+  --white: #ffffff;
+  --grey-1: #edecec;
+  --grey-2: #b7b4b4;
+  --underline: linear-gradient(90deg, var(--cyan), var(--purple-1));
+  --underline-2: linear-gradient(40deg, var(--cyan), var(--purple-1));
+  --gradient: linear-gradient(90deg, var(--cyan), var(--white));
+  --trans-box: all 400ms;
+}
+
+body {
+  background: var(--bg);
+  height: 100%;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  height: 200px;
+  width: 200px;
+  background: var(--cyan);
+  filter: blur(140px);
+  z-index: -1;
+}
+body::after {
+  content: "";
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 200px;
+  width: 300px;
+  background: var(--purple-1);
+  filter: blur(140px);
+  z-index: -1;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.header .head h1 {
+  font-family: teko;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.1vw;
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.login-con {
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  background: linear-gradient(var(--bg), var(--bg)) padding-box, linear-gradient(to right, var(--cyan), var(--purple-1)) border-box;
+  border-radius: 50em;
+  border: 4px solid transparent;
+  margin-top: 10%;
+  width: 50%;
+  padding: 1rem 0;
+  border-radius: 20px;
+}
+
+.signup {
+  margin-top: 5%;
+}
+
+.contact-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--grey-1);
+  transition: var(--trans-box);
+}
+.contact-con .contact {
+  font-family: cinzel;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-con .input-control {
+  margin: 1.5rem 0;
+  transition: var(--trans-box);
+}
+.contact-con .input-control input,
+.contact-con .input-control textarea {
+  border-radius: 30px;
+  font: 400 20px teko;
+  letter-spacing: 2px;
+  padding: 0.8rem 1.1rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 3px rgb(255, 255, 255);
+  background: transparent;
+  width: 100%;
+  color: var(--grey-1);
+  resize: none;
+  transition: var(--trans-box);
+}
+@media (max-width: 700px) {
+  .contact-con .input-control {
+    width: 100%;
+  }
+}
+.contact-con #submit,
+.contact-con .submit {
+  cursor: pointer;
+  padding: 10px 20px;
+  background: transparent;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.61);
+  color: var(--grey-2);
+  font-size: 2rem;
+  transition: var(--trans-box);
+}
+.contact-con #submit:hover,
+.contact-con .submit:hover {
+  transform: scale(1.1);
+  border-radius: 12px;
+}
+.contact-con #submit:active,
+.contact-con .submit:active {
+  transform: scale(0.9);
+}
+.contact-con label {
+  font-size: 1.5rem;
+}
+.contact-con #gender {
+  background: transparent;
+  color: var(--grey-2);
+  width: 100px;
+  border-radius: 12px;
+  padding: 10px;
+}
+.contact-con #gender option {
+  background: #000;
+}
+@media (max-width: 730px) {
+  .contact-con .contact-form {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: var(--trans-box);
+  }
+  .contact-con .contact-form label {
+    font-size: 1.2rem;
+  }
+}
+
+.btn {
+  width: 100%;
+  text-align: center;
+}
+.btn p {
+  font-family: teko;
+  font-size: 22px;
+  margin-top: 1rem;
+  color: var(--grey-2);
+}
+.btn p a {
+  color: var(--white);
+}
+.btn p a:where(:hover, :active) {
+  color: var(--cyan);
+}
+
+.login-foo {
+  position: absolute !important;
+  width: 100%;
+  bottom: 0 !important;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  transition: var(--trans-box);
+}
+.footer footer {
+  font: 400 2.5rem teko;
+  letter-spacing: 2px;
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  transition: var(--trans-box);
+}
+@media (max-width: 600px) {
+  .footer footer {
+    font-size: 6vw;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #01011d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--underline-2);
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */
